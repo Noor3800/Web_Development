@@ -7,5 +7,5 @@ Web Development Course – [Noor Fatima]
 
 ## Repository Structure:
 - **Assignments** (4)
-- **Lab Tasks** (4)
 - **Exams** (Midterm & Final)
+- **Lab Tasks** (4)
