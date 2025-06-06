@@ -1,0 +1,27 @@
+<div class="product-page">
+    <div class="discount">
+        <h1>Up to 30% off!</h1>
+    </div>
+
+    <div class="products">
+
+        <% for( let index = 0; index < products.length; index++ ) { %>
+
+            <a href="" class="product-cont">
+            <div class="product-img">
+                <img src="<%= products[index].image %>" alt="">
+            </div>
+            <div class="product-desc">
+                <%= products[index].description %>
+            </div>
+            <div class="product-price">
+                $<%= products[index].price %>
+            </div>
+        </a>
+        
+        <% } %>
+    
+       
+    </div>
+</div>
+
