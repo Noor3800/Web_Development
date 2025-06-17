@@ -1,0 +1,79 @@
+
+<div class="top-bar">
+    <p>FREE SHIPPING ON ORDERS OVER £200. <a href="#">SHOP NOW</a></p>
+</div>
+
+<% for( let index = 0; index < products.length; index++ ) { %>
+    <div class="product">
+        <h2 class="product-title"> <%= products[index].title %> </h2>
+        <p class="product-description"><%= products[index].description %></p>
+        <div class="product-price"><%= products[index].price %></div>        
+    </div>
+<% } %>
+   
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Collection</h1>
+            <p>Spring Summer 2025</p>
+            <div class="buttons">
+                <a href="#" class="btn">SHOP MEN'S</a>
+                <a href="#" class="btn">SHOP WOMEN'S</a>
+            </div>
+        </div>
+    </section>
+
+        
+    <section class="Category">
+        <h2>Shop by Category</h2>
+        <div class="Category-grid">
+            <div class="Category-box">
+                <img src="images/T-shirts.jpg" alt="T-Shirts">
+                <h3>T-Shirts</h3>
+            </div>
+            <div class="Category-box">
+                <img src="images/Polo Shirts.jpg" alt="Polo Shirt">
+                <h3>Polo Shirt</h3>
+            </div>
+            <div class="Category-box">
+                <img src="images/Knitwear.jpg" alt="knitwear">
+                <h3>Knitwear</h3>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="Banner">
+        <div class="Banner-content">
+            <h2>Knitwear</h2>
+            <a href="#" class="btn">SHOP NOW</a>
+        </div>
+    </section>
+
+    <section class="shirts-section">
+        <div class="category">
+            <img src="images/shirts.jpg" alt="Shirts">
+            <h2>Shirts</h2>
+        </div>
+        <div class="category">
+            <img src="images/polo-shirts.jpg" alt="Polo Shirts">
+            <h2>Polo Shirts</h2>
+        </div>
+    </section>
+    
+    <h1 class="heading">British Luxury since 1860</h1>
+
+    <section class="container">
+        <div class="image-text">
+            <img src="images/tshirt.jpg" alt="T-Shirt">
+            <p>The Sunspel T-shirt handmade in England</p>
+        </div>
+        <div class="image-text">
+            <img src="images/polo-james-bond.jpg" alt="Polo Shirt James Bond">
+            <p>The Riviera Polo Shirt tailored for James Bond</p>
+        </div>
+        <div class="image-text">
+            <img src="images/underwear.jpg" alt="Luxury Underwear">
+            <p>The original luxury British underwear</p>
+        </div>
+    </section>
+    
