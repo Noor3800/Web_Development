@@ -1,0 +1,13 @@
+<h2>Product List</h2>
+<a href="/admin/add-product">Add New Product</a>
+<ul>
+  <% products.forEach(p => { %>
+    <li>
+      <%= p.title %> - $<%= p.price %>
+      <a href="/admin/edit-product/<%= p._id %>">Edit</a>
+      <form action="/admin/delete-product/<%= p._id %>" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
