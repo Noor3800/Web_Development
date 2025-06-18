@@ -249,66 +249,42 @@
 
 
 
+    <div class="bg-light">
+    <div class="container menu-head">
+      <nav>
+        <ul class="nav justify-content-center flex-nowrap">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="/products">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
 
+          <li class="nav-item">
+            <a class="nav-link" href="/cart">Cart</a>
+          </li>
 
+          <% if (session && session.user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/my_orders">My Orders</a>
+          </li>
+          
+          <% } %> <% if(!session.user) { %>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/register">Register</a>
+          </li>
 
+          <% } else { %>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<header>
-   
-    
-
-
-
-    <header>
-        <nav>
-            <ul class="left-links">
-                <li><a href="#">New</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">T-shirts</a></li>
-                <li><a href="#">Polo Shirts</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-            <div class="logo">
-                <img src="images/logo.png" alt="Sunspel Logo">
-            </div>
-            <ul class="right-links">
-                <li><a href="#">Search</a></li>
-                <li><a href="#">Help</a></li>
-                <% if (user) { %>
-                <div class="user-info">
-                    <p>Welcome, <%= user.name %>!</p>
-                    <a href="/logout" class="btn btn-sm btn-outline-danger ms-2">Logout</a>
-                    <a href="/my-orders" class="btn btn-sm btn-outline-primary ms-2">My orders</a>
-                </div>
-                <% } %>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <%- body %>
-
-
-<div class="blacktab text-center">
-  <a href="#">Unlimited Next Day Delivery £14.99 | Shop Now</a>
-</div>
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/logout">Logout</a>
+          </li>
+          <% } %>
+        </ul>
+      </nav>
+    </div>
+  </div>
