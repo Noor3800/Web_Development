@@ -1,0 +1,88 @@
+body{
+    background-color: lightcoral;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    width: 60%;
+    height: 2rem;
+    font-size: 1.3rem;
+}
+
+textarea{
+    height: 5rem;
+}
+
+button{
+    width: 100px;
+    height: 40px;
+    margin-top: 2rem;
+    background-color: pink;
+    border: 2px solid palevioletred;
+    border-radius: 10px;
+}
+
+.display{
+    display: inline-block;
+}
+
+.hidden{
+    display: none;
+}
+
+#products{
+    display: flex;
+    flex-direction: column;
+}
+
+#products > div{
+    width: 40%;
+    height: auto;
+    border: 2px solid black;
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: rgb(236, 229, 166);
+}
+
+#products h3{
+    font-size: 2rem;
+}
+
+#products h4{
+    font-size: 1.5rem;
+}
+
+#products p{
+    font-size: 1.3rem;
+}
+
+#products img{
+    width: 70%;
+    height: 300px;
+}
+
+.edit{
+    background-color: plum;
+    margin-right: 2rem;
+}
+
+.delete{
+    background-color: red;
+    border-color: black;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+@media (max-width: 800px)
+{
+    #products > div{
+        width: 70%;
+    }
+}
