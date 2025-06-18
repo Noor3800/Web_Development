@@ -1,0 +1,22 @@
+<div class="container mt-5" style="max-width: 600px;">
+  <div class="card shadow p-4">
+    <h2 class="text-center mb-4 text-dark">Contact Us / Submit Complaint</h2>
+
+    <form method="POST" action="/complaints/contact">
+      <div class="form-group mb-3">
+        <label for="orderId" class="form-label fw-semibold">Order ID</label>
+        <input type="text" id="orderId" name="orderId" placeholder="Enter Order ID" required class="form-control">
+      </div>
+
+      <div class="form-group mb-4">
+        <label for="message" class="form-label fw-semibold">Complaint Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Enter your complaint" required class="form-control"></textarea>
+      </div>
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary px-4">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+

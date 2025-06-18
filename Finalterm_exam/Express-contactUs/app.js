@@ -9,6 +9,7 @@ const adminRoutes = require("./routes/admin");
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const path = require('path');
+const complaint_routes= require('./routes/complaint');
 
 require('dotenv').config();
 
@@ -39,6 +40,7 @@ app.use('/auth', authRoutes);
 app.use('/cart', cartRoutes);
 app.use('/', orderRoutes);
 app.use('/admin', adminRoutes);
+app.use('/complaints',complaint_routes)
 
 mongoose.connect('mongodb://localhost:27017/DB')
     .then(() => console.log('✅ Connected to MongoDB'))
