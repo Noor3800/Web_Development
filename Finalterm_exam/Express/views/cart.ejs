@@ -1,0 +1,33 @@
+<br>
+<h2 class="text-center">Your Cart</h2>
+<br>
+
+<% if (cart.length === 0) { %>
+  <p>Your cart is empty.</p>
+<% } else { %>
+  <table class="table">
+    <thead><tr><th>Product</th><th>Price</th><th>Qty</th><th>Total</th><th>Action</th></tr></thead>
+    <tbody>
+      <% cart.forEach(item => { %>
+        <tr>
+          <td><%= item.title %></td>
+          <td>$<%= item.price %></td>
+          <td>
+            <form action="/cart/update/<%= item.id %>" method="POST">
+              <input type="number" name="quantity" value="<%= item.quantity %>" min="1" />
+              <button type="submit">Update</button>
+            </form>
+          </td>
+          <td>$<%= item.price * item.quantity %></td>
+          <td>
+            <form action="/cart/remove/<%= item.id %>" method="POST">
+              <button type="submit">Remove</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <h4>Total: $<%= total %></h4>
+  <a href="/cart/checkout" class="btn btn-success">Checkout</a>
+<% } %>
